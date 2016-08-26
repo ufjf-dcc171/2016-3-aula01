@@ -2,15 +2,17 @@ package br.ufjf.dcc171;
 
 public class Livro {
     private String titulo;
+    private String autor;
     private Integer ano;
     private Integer paginas;
-    private Float preco;
+    private Double preco;
 
     public Livro() {
     }
 
-    public Livro(String titulo, Integer ano, Integer paginas, Float preco) {
+    public Livro(String titulo, String autor, Integer ano, Integer paginas, Double preco) {
         this.titulo = titulo;
+        this.autor = autor;
         this.ano = ano;
         this.paginas = paginas;
         this.preco = preco;
@@ -23,6 +25,14 @@ public class Livro {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
+   public String getAutor() {
+      return autor;
+   }
+
+   public void setAutor(String autor) {
+      this.autor = autor;
+   }
 
     public Integer getAno() {
         return ano;
@@ -40,17 +50,18 @@ public class Livro {
         this.paginas = paginas;
     }
 
-    public Float getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(Float preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
    @Override  
    public String toString() {
-      return titulo + "\n (" + ano + ") " + paginas + "pg. R$" + preco;
+      return titulo + "\n "
+              + autor + " (" + ano + ") " + paginas + "pg. R$" + preco;
    }
     
     
