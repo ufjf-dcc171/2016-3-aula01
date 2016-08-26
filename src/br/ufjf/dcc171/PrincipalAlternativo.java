@@ -6,17 +6,15 @@ import java.util.List;
 public class PrincipalAlternativo {
 
    public static void main(String[] args) {
-      List<Livro> livros = new ArrayList<>();
+      List<Produto> produtos = new ArrayList<>();
 
-      livros.add(new Livro("Java como programar", "João da Silva", 1967, 50, 123.45));
-      livros.add(new Livro("Java como programar: o retorno da função", "João da Silva", 1972, 56, 73.45));      livros.add(new Livro("Java como programar: o bug contra ataca", "João da Silva", 1976, 156, 173.45));
-      
-      CD cd1 = new CD("Exception", "Bonde Java", 20.45);
+      produtos.add(new Livro("Java como programar", "João da Silva", 1967, 50, 123.45));
+      produtos.add(new Livro("Java como programar: o retorno da função", "João da Silva", 1972, 56, 73.45));      produtos.add(new Livro("Java como programar: o bug contra ataca", "João da Silva", 1976, 156, 173.45));
+      produtos.add(new CD("Exception", "Bonde Java", 20.45));
 
-      for (Livro livro : livros) {
-         System.out.println(livro);
+      for (Produto produto : produtos) {
+         System.out.println(produto);
       }
-      System.out.println(cd1);
    }
 
 }
